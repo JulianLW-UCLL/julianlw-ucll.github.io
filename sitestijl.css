@@ -1,0 +1,993 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://rsms.me/inter/inter.css");
+* {
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+}
+
+body {
+  background-color: #3f4044;
+  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, serif;
+  overflow-x: hidden;
+}
+
+/* header + nav */
+li,
+a,
+button {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 30px 10%;
+  background-color: #24252A;
+  position: relative;
+  width: 100%;
+  box-shadow: 0 4px 8px 0 black;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.logo {
+  cursor: pointer;
+  margin-right: auto;
+  font-size: x-large;
+}
+@media (max-width: 680px) {
+  .logo {
+    display: none;
+  }
+}
+
+.nav_links {
+  list-style: none;
+}
+.nav_links li {
+  display: inline-block;
+  padding: 0px 20px;
+  list-style: none;
+}
+.nav_links li a {
+  transition: all 0.3s ease 0s;
+}
+.nav_links li a:hover {
+  color: rgb(101, 152, 51);
+}
+
+#home-page .link1,
+#tuinen-page .link2,
+#containers-page .link3 {
+  color: rgb(101, 152, 51);
+}
+
+#contact-page .contact button {
+  background-color: rgba(101, 152, 51, 0.5);
+}
+
+.contact button {
+  padding: 9px 25px;
+  background-color: rgb(102, 153, 51);
+  border: none;
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  margin-left: 20px;
+}
+
+.contact button:hover {
+  background-color: rgba(101, 152, 51, 0.5);
+}
+
+/* main */
+#home-page .banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/terbeek-banner.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  text-align: center;
+  text-decoration: none;
+  margin-top: -120px;
+}
+#home-page .banner h1 {
+  color: white;
+  font-family: "montserrat";
+  font-size: 30px;
+  padding-top: 25%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+@media (max-width: 1100px) {
+  #home-page .banner h1 {
+    padding-top: 30%;
+  }
+}
+@media (max-width: 900px) {
+  #home-page .banner h1 {
+    padding-top: 35%;
+  }
+}
+@media (max-width: 700px) {
+  #home-page .banner h1 {
+    padding-top: 40%;
+  }
+}
+@media (max-width: 580px) {
+  #home-page .banner h1 {
+    padding-top: 45%;
+  }
+}
+@media (max-width: 480px) {
+  #home-page .banner h1 {
+    padding-top: 60%;
+  }
+}
+@media (max-width: 480px) {
+  #home-page .banner h1 {
+    padding-top: 80%;
+  }
+}
+@media (max-width: 320px) {
+  #home-page .banner h1 {
+    font-size: 20px;
+    padding-top: 100%;
+  }
+}
+
+#tuinen-page .banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/tuinenterbeek-banner.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  color: white;
+  font-family: "montserrat";
+  font-size: 30px;
+  padding: 12%;
+  text-align: center;
+  text-decoration: none;
+}
+#tuinen-page .banner img {
+  max-height: 400px;
+  max-width: 600px;
+}
+@media (max-width: 735px) {
+  #tuinen-page .banner img {
+    height: 250px;
+    width: 350px;
+  }
+}
+@media (max-width: 420px) {
+  #tuinen-page .banner img {
+    height: 300px;
+    width: 250px;
+    padding-top: 100px;
+  }
+}
+@media (max-width: 300px) {
+  #tuinen-page .banner img {
+    height: 280px;
+    width: 220px;
+    padding-top: 100px;
+  }
+}
+
+#containers-page .banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/containers-banner.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  color: white;
+  font-family: "montserrat";
+  font-size: 20px;
+  padding: 12%;
+  text-align: center;
+  text-decoration: none;
+  border-bottom: solid #24252A 4px;
+}
+#containers-page .banner img {
+  height: 350px;
+  width: 640px;
+}
+@media (max-width: 735px) {
+  #containers-page .banner img {
+    height: 250px;
+    width: 350px;
+  }
+}
+@media (max-width: 420px) {
+  #containers-page .banner img {
+    height: 300px;
+    width: 250px;
+    padding-top: 100px;
+  }
+}
+@media (max-width: 300px) {
+  #containers-page .banner img {
+    height: 280px;
+    width: 220px;
+    padding-top: 100px;
+  }
+}
+
+.over-ons {
+  display: flex;
+  justify-content: center;
+  background-color: #24252A;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 black;
+  margin: 20px;
+}
+
+.titel {
+  display: flex;
+  font-family: "montserrat";
+  color: white;
+  background-color: #669933;
+  padding: 5px;
+  border-radius: 10px;
+  margin: 15px;
+  box-shadow: 0 4px 8px 0 black;
+  font-size: 30px;
+}
+
+.slogan {
+  display: flex;
+  justify-content: center;
+  background-color: #24252A;
+  color: #669933;
+  padding: 5px;
+}
+
+.specialiteiten {
+  display: flex;
+  justify-content: center;
+  background-color: #24252A;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 black;
+  margin: 20px;
+}
+
+.onze-troeven {
+  display: flex;
+  justify-content: center;
+  background-color: #24252A;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 black;
+  margin: 20px;
+}
+
+.onze-realisaties {
+  display: flex;
+  justify-content: center;
+  background-color: #24252A;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 black;
+  margin: 20px;
+}
+
+.type-afval {
+  display: flex;
+  justify-content: center;
+  background-color: #24252A;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 black;
+  margin: 20px;
+}
+
+.container-over-ons {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.container-over-ons .card {
+  margin: 30px;
+  border-radius: 10px;
+}
+.container-over-ons .card-over-ons-tekst {
+  background-color: #24252A;
+  height: 370px;
+  width: 900px;
+  padding: 30px;
+  box-shadow: 0 4px 8px 0 rgb(102, 153, 51);
+  flex-basis: 70%;
+}
+@media (max-width: 946px) {
+  .container-over-ons .card-over-ons-tekst {
+    height: 400px;
+  }
+}
+@media (max-width: 896px) {
+  .container-over-ons .card-over-ons-tekst {
+    height: 450px;
+  }
+}
+@media (max-width: 852px) {
+  .container-over-ons .card-over-ons-tekst {
+    height: 500px;
+  }
+}
+@media (max-width: 830px) {
+  .container-over-ons .card-over-ons-tekst {
+    height: 370px;
+    flex-basis: 100%;
+  }
+}
+@media (max-width: 424px) {
+  .container-over-ons .card-over-ons-tekst {
+    width: 200px;
+    height: 400px;
+  }
+}
+@media (max-width: 376px) {
+  .container-over-ons .card-over-ons-tekst {
+    width: 200px;
+    height: 450px;
+  }
+}
+@media (max-width: 332px) {
+  .container-over-ons .card-over-ons-tekst {
+    width: 200px;
+    height: 500px;
+  }
+}
+@media (max-width: 281px) {
+  .container-over-ons .card-over-ons-tekst {
+    width: 200px;
+    height: 550px;
+  }
+}
+.container-over-ons .card-over-ons-tekst ul li {
+  font-family: "montserrat";
+  margin-bottom: 15px;
+}
+.container-over-ons .card-over-ons-tekst h3 {
+  font-family: "inter";
+  margin-top: 15px;
+  color: #669933;
+}
+.container-over-ons .card-google-maps {
+  background-color: #24252A;
+  height: 370px;
+  width: 470px;
+  padding: 30px;
+  box-shadow: 0 4px 8px 0 rgb(102, 153, 51);
+  flex-basis: 30%;
+}
+.container-over-ons .card-google-maps .google-maps {
+  border-radius: 10px;
+}
+@media (max-width: 830px) {
+  .container-over-ons .card-google-maps {
+    display: none;
+  }
+}
+
+.container-onze-troeven {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.container-onze-troeven .card {
+  margin: 30px;
+  border-radius: 10px;
+}
+.container-onze-troeven .card-onze-troeven-tekst {
+  background-color: #24252A;
+  height: 370px;
+  width: 900px;
+  padding: 30px;
+  box-shadow: 0 4px 8px 0 rgb(102, 153, 51);
+  flex-basis: 70%;
+}
+@media (max-width: 1240px) {
+  .container-onze-troeven .card-onze-troeven-tekst {
+    height: 400px;
+  }
+}
+@media (max-width: 1180px) {
+  .container-onze-troeven .card-onze-troeven-tekst {
+    height: 450px;
+  }
+}
+@media (max-width: 1123px) {
+  .container-onze-troeven .card-onze-troeven-tekst {
+    height: 480px;
+  }
+}
+@media (max-width: 1008px) {
+  .container-onze-troeven .card-onze-troeven-tekst {
+    height: 500px;
+  }
+}
+@media (max-width: 993px) {
+  .container-onze-troeven .card-onze-troeven-tekst {
+    height: 520px;
+  }
+}
+@media (max-width: 985px) {
+  .container-onze-troeven .card-onze-troeven-tekst {
+    height: 550px;
+  }
+}
+@media (max-width: 937px) {
+  .container-onze-troeven .card-onze-troeven-tekst {
+    height: 600px;
+  }
+}
+@media (max-width: 909px) {
+  .container-onze-troeven .card-onze-troeven-tekst {
+    height: 650px;
+  }
+}
+@media (max-width: 878px) {
+  .container-onze-troeven .card-onze-troeven-tekst {
+    height: 700px;
+  }
+}
+@media (max-width: 867px) {
+  .container-onze-troeven .card-onze-troeven-tekst {
+    height: 750px;
+  }
+}
+@media (max-width: 845px) {
+  .container-onze-troeven .card-onze-troeven-tekst {
+    height: 800px;
+  }
+}
+@media (max-width: 830px) {
+  .container-onze-troeven .card-onze-troeven-tekst {
+    flex-basis: 100%;
+    height: 370px;
+  }
+}
+@media (max-width: 800px) {
+  .container-onze-troeven .card-onze-troeven-tekst {
+    height: 400px;
+  }
+}
+@media (max-width: 734px) {
+  .container-onze-troeven .card-onze-troeven-tekst {
+    height: 450px;
+  }
+}
+@media (max-width: 689px) {
+  .container-onze-troeven .card-onze-troeven-tekst {
+    height: 380px;
+  }
+}
+@media (max-width: 595px) {
+  .container-onze-troeven .card-onze-troeven-tekst {
+    height: 420px;
+  }
+}
+@media (max-width: 494px) {
+  .container-onze-troeven .card-onze-troeven-tekst {
+    height: 500px;
+  }
+}
+@media (max-width: 417px) {
+  .container-onze-troeven .card-onze-troeven-tekst {
+    height: 550px;
+  }
+}
+@media (max-width: 395px) {
+  .container-onze-troeven .card-onze-troeven-tekst {
+    height: 600px;
+  }
+}
+@media (max-width: 375px) {
+  .container-onze-troeven .card-onze-troeven-tekst {
+    height: 700px;
+  }
+}
+@media (max-width: 331px) {
+  .container-onze-troeven .card-onze-troeven-tekst {
+    height: 600px;
+  }
+}
+@media (max-width: 281px) {
+  .container-onze-troeven .card-onze-troeven-tekst {
+    height: 650px;
+  }
+}
+.container-onze-troeven .card-onze-troeven-tekst ul li {
+  font-family: "montserrat";
+  margin-bottom: 15px;
+}
+@media (max-width: 689px) {
+  .container-onze-troeven .card-onze-troeven-tekst ul li {
+    font-size: 15px;
+  }
+}
+@media (max-width: 331px) {
+  .container-onze-troeven .card-onze-troeven-tekst ul li {
+    font-size: 12px;
+  }
+}
+.container-onze-troeven .card-image-troeven {
+  background-color: #24252A;
+  height: 370px;
+  width: 470px;
+  padding: 30px;
+  box-shadow: 0 4px 8px 0 rgb(102, 153, 51);
+  flex-basis: 30%;
+}
+@media (max-width: 830px) {
+  .container-onze-troeven .card-image-troeven {
+    display: none;
+  }
+}
+.container-onze-troeven .card-image-troeven .image-troeven {
+  border-radius: 10px;
+  height: 300px;
+  width: 300px;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+.diensten {
+  display: flex;
+  justify-content: center;
+  background-color: #24252A;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 black;
+  margin: 20px;
+}
+@media (max-width: 260px) {
+  .diensten {
+    display: none;
+  }
+}
+
+.container-diensten {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+@media (max-width: 260px) {
+  .container-diensten {
+    display: none;
+  }
+}
+
+.card-image {
+  background-color: #24252A;
+  width: 600px;
+  height: 600px;
+  margin: 30px;
+  box-shadow: 0 4px 8px 0 rgb(102, 153, 51);
+  transition: 0.3s;
+  border-radius: 10px;
+}
+@media (max-width: 659px) {
+  .card-image {
+    width: 400px;
+    height: 400px;
+  }
+}
+@media (max-width: 460px) {
+  .card-image {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.card-image:hover {
+  box-shadow: 0 4px 16px 0 rgb(102, 153, 51);
+  cursor: pointer;
+  transform: scale(1.02);
+  transition: 250ms ease;
+}
+
+.image-1 {
+  width: 550px;
+  height: 450px;
+  padding-top: 150px;
+  padding-left: 50px;
+}
+@media (max-width: 659px) {
+  .image-1 {
+    width: 350px;
+    height: 300px;
+    padding-top: 100px;
+  }
+}
+@media (max-width: 460px) {
+  .image-1 {
+    width: 180px;
+    height: 160px;
+    padding-top: 50px;
+    padding-left: 20px;
+  }
+}
+
+.image-2 {
+  width: 600px;
+  height: 413px;
+  padding-top: 135px;
+  padding-left: 30px;
+}
+@media (max-width: 659px) {
+  .image-2 {
+    width: 400px;
+    height: 300px;
+    padding-top: 100px;
+    padding-left: 10px;
+  }
+}
+@media (max-width: 460px) {
+  .image-2 {
+    width: 200px;
+    height: 150px;
+    padding-top: 45px;
+    padding-left: 10px;
+  }
+}
+
+.container-specialiteiten {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.container-specialiteiten .card-specialiteiten {
+  background-color: #24252A;
+  width: 330px;
+  height: 600px;
+  margin: 10px;
+  color: white;
+  box-shadow: 0 4px 8px 0 rgb(102, 153, 51);
+  border-radius: 10px;
+}
+@media (max-width: 1400px) {
+  .container-specialiteiten .card-specialiteiten {
+    flex-grow: 1;
+  }
+}
+@media (max-width: 324px) {
+  .container-specialiteiten .card-specialiteiten {
+    height: 650px;
+  }
+}
+@media (max-width: 324px) {
+  .container-specialiteiten .card-specialiteiten {
+    height: 700px;
+  }
+}
+.container-specialiteiten .card-image-specialiteiten {
+  height: 150px;
+  margin-bottom: 15px;
+}
+.container-specialiteiten .icon-1 {
+  display: flex;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  padding-top: 5px;
+}
+.container-specialiteiten .icon-2 {
+  display: flex;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  padding-top: 5px;
+}
+.container-specialiteiten .icon-3 {
+  display: flex;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  padding-top: 5px;
+}
+.container-specialiteiten .icon-4 {
+  display: flex;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  padding-top: 5px;
+}
+.container-specialiteiten h2 {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+  color: #669933;
+}
+.container-specialiteiten p {
+  margin: 20px;
+  line-height: 150%;
+  font-family: "montserrat";
+}
+
+.realisaties-grid {
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+  margin-top: 28px;
+  width: 98vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 210px));
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  row-gap: 50px;
+  background-color: #24252A;
+  padding-left: 60px;
+  padding-top: 75px;
+  padding-bottom: 75px;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px 0 rgb(102, 153, 51);
+}
+@media (max-width: 730px) {
+  .realisaties-grid {
+    width: 90vw;
+  }
+}
+.realisaties-grid img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px 0 black;
+}
+
+.opsomming-zones {
+  font-size: small;
+  display: flex;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.536);
+  font-family: "montserrat";
+  margin-left: 10px;
+}
+.opsomming-zones .zone-titel {
+  margin-right: 3px;
+  margin-left: 3px;
+  color: #669933;
+  text-transform: uppercase;
+}
+
+.container-type-afval {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.container-type-afval .card-type-afval {
+  background-color: #24252A;
+  width: 330px;
+  height: 380px;
+  margin: 10px;
+  color: white;
+  box-shadow: 0 4px 8px 0 rgb(102, 153, 51);
+  border-radius: 10px;
+  padding: 20px;
+  flex-basis: 30%;
+  flex-wrap: wrap;
+}
+@media (max-width: 1300px) {
+  .container-type-afval .card-type-afval {
+    height: 450px;
+  }
+}
+@media (max-width: 793px) {
+  .container-type-afval .card-type-afval {
+    height: 550px;
+  }
+}
+@media (max-width: 729px) {
+  .container-type-afval .card-type-afval {
+    height: 650px;
+  }
+}
+.container-type-afval h2 {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+  color: #669933;
+  padding-bottom: 10px;
+}
+.container-type-afval ul li {
+  list-style: none;
+  font-family: "montserrat";
+}
+.container-type-afval ul {
+  margin-top: 40px;
+}
+.container-type-afval .prijs {
+  font-size: x-large;
+  display: flex;
+  justify-content: center;
+  font-family: "inter";
+}
+.container-type-afval .zone {
+  font-size: x-small;
+  display: flex;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.536);
+}
+.container-type-afval .btw {
+  font-size: x-small;
+  display: flex;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.536);
+}
+.container-type-afval i {
+  margin-right: 10px;
+}
+.container-type-afval .snoeiafval {
+  width: 330px;
+  height: 330px;
+}
+@media (max-width: 821px) {
+  .container-type-afval .snoeiafval {
+    height: 400px;
+  }
+}
+@media (max-width: 729px) {
+  .container-type-afval .snoeiafval {
+    height: 550px;
+  }
+}
+.container-type-afval .wortelhout {
+  width: 330px;
+  height: 270px;
+}
+@media (max-width: 821px) {
+  .container-type-afval .wortelhout {
+    height: 400px;
+  }
+}
+@media (max-width: 729px) {
+  .container-type-afval .wortelhout {
+    height: 550px;
+  }
+}
+
+.pijl {
+  display: flex;
+  justify-content: center;
+  background-color: #24252A;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 0 4px 8px 0 black;
+  margin-top: 30px;
+}
+
+.footer {
+  background-color: #24252A;
+  padding: 20px;
+  color: #669933;
+  font-size: 11px;
+  line-height: 2;
+  display: flex;
+  justify-content: center;
+}
+.footer h2 {
+  margin-left: 20px;
+}
+
+/* Contact-pagina */
+.container-contact {
+  width: 80%;
+  margin: 50px auto;
+}
+.container-contact .contact-box {
+  background-color: #24252A;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgb(102, 153, 51);
+}
+.container-contact .contact-links {
+  flex-basis: 60%;
+  padding: 40px 60px;
+}
+@media (max-width: 895px) {
+  .container-contact .contact-links {
+    flex-basis: 100%;
+  }
+}
+.container-contact .contact-rechts {
+  flex-basis: 40%;
+  padding: 40px;
+  background-color: #669933;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 4px 8px 0 black;
+}
+@media (max-width: 895px) {
+  .container-contact .contact-rechts {
+    flex-basis: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+}
+@media (max-width: 358px) {
+  .container-contact .contact-rechts {
+    width: 300px;
+  }
+}
+.container-contact .contact {
+  display: flex;
+  justify-content: center;
+  background-color: #24252A;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 black;
+  margin-bottom: 30px;
+}
+.container-contact .input-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.container-contact .input-row .input-group {
+  flex-basis: 45%;
+}
+.container-contact .input-row .input-group input {
+  width: 100%;
+  border: 2px solid #669933;
+  padding: 5px;
+  border-radius: 10px;
+  outline: none;
+  background-color: #3f4044;
+  color: white;
+  font-family: "montserrat";
+}
+.container-contact textarea {
+  width: 100%;
+  border: 2px solid #669933;
+  outline: none;
+  padding: 10px;
+  background-color: #3f4044;
+  color: white;
+  font-family: "montserrat";
+}
+.container-contact label {
+  margin-bottom: 6px;
+  display: block;
+}
+.container-contact button {
+  background-color: #669933;
+  width: 100px;
+  height: 35px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  margin-top: 20px;
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.3);
+}
+.container-contact .contact-links h3 {
+  color: #669933;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.container-contact .contact-rechts h3 {
+  color: white;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.container-contact tr td:first-child {
+  padding-right: 20px;
+}
+.container-contact tr td {
+  padding-top: 20px;
+}/*# sourceMappingURL=sitestijl.css.map */
